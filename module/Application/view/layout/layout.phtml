@@ -1,0 +1,146 @@
+<?= $this->doctype() ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?= $this->headTitle()->setAutoEscape(false) ?>
+
+        <?= $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+        
+        <!-- styles -->
+        <?= 
+            $this->headLink(array(
+                'rel'=>'stylesheet',
+                'href'=>'https://fonts.googleapis.com/css?family=Chicle|Merriweather|Montserrat|Sniglet&display=swap'
+                ))
+            // ->headLink(array(
+            //     'rel'=>'stylesheet',
+            //     'href'=>'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css',
+            //     'integrity'=>'sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T',
+            //     'crossorigin'=>'anonymous'
+            //     ))
+            ->appendStylesheet($this->basePath('css/bootstrap.min.css'))
+            ->appendStylesheet($this->basePath('css/style.css'))
+        ?>
+
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/cfce15a540.js"></script>
+    </head>
+    <body>
+
+        <nav class="main-nav-container">
+            <ul class="nav-items-container-desktop container">
+                <li class="nav-item left-item <?= $this->activePage == 'home' ? 'active' : '' ?>">
+                    <a class="nav-item-link" href="/">HOME</a>
+                </li>
+                <li class="nav-item left-item <?= $this->activePage == 'about-us' ? 'active' : '' ?>">
+                    <a class="nav-item-link" href="/about-us">ABOUT US</a>
+                </li>
+
+                <li class="nav-item left-item <?= $this->activePage == 'classes' ? 'active' : '' ?>">
+                    <a class="nav-item-link" href="/classes">CLASSES</a>
+                </li>
+
+                <li class="nav-item left-item <?= $this->activePage == 'birthdays' ? 'active' : '' ?>">
+                    <a class="nav-item-link" href="/birthdays">BIRTHDAYS</a>
+                </li>
+                
+                <li class="nav-logo-container">
+                    <a class="nav-logo-wrapper" href="/">
+                    <img class="company-logo"
+                        src="<?php echo $this->basePath('images/logo.svg') ?>"
+                        alt="company logo">
+                    </a>
+                </li>
+
+                <li class="nav-item right-item <?= $this->activePage == 'facilities' ? 'active' : '' ?>">
+                    <a class="nav-item-link" href="/facilities">FACILITIES</a>
+                </li>
+
+                <li class="nav-item right-item <?= $this->activePage == 'super-goalie' ? 'active' : '' ?>">
+                    <a class="nav-item-link" href="/super-goalie">SUPER GOALIE</a>
+                </li>
+                
+               
+                <li class="nav-item right-item <?= $this->activePage == 'contact-us' ? 'active' : '' ?>">
+                    <a class="nav-item-link" href="/contact-us">CONTACT US</a>
+                </li>
+            </ul>
+            <div class="nav-items-container-mobile">
+                <div class="nav-logo-container">
+                    <a class="nav-logo-wrapper" href="/">
+                        <img class="company-logo"
+                            src="<?php echo $this->basePath('images/logo.svg') ?>"
+                            alt="company logo">
+                    </a>
+                </div><!--
+                --><div class="nav-toggler-container">
+                    <label for="navDropdownToggler">
+                        <span class="open">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                        <!-- <span class="close">
+                            <i class="fas fa-times"></i>
+                        </span> -->
+                    </label>
+                </div>
+                <input id="navDropdownToggler" type="checkbox">
+                <ul class="nav-list-mobile">
+                    <li class="nav-item <?= $this->activePage == 'home' ? 'active' : '' ?>">
+                        <a class="nav-item-link" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item <?= $this->activePage == 'about-us' ? 'active' : '' ?>">
+                        <a class="nav-item-link" href="/about-us">ABOUT US</a>
+                    </li>
+                    <li class="nav-item <?= $this->activePage == 'classes' ? 'active' : '' ?>">
+                        <a class="nav-item-link" href="/classes">CLASSES</a>
+                    </li>
+                    <li class="nav-item <?= $this->activePage == 'birthdays' ? 'active' : '' ?>">
+                        <a class="nav-item-link" href="/birthdays">BIRTHDAYS</a>
+                    </li>
+                    <li class="nav-item <?= $this->activePage == 'facilities' ? 'active' : '' ?>">
+                        <a class="nav-item-link" href="/facilities">FACILITIES</a>
+                    </li>
+                    <li class="nav-item <?= $this->activePage == 'super-goalie' ? 'active' : '' ?>">
+                        <a class="nav-item-link" href="/super-goalie">SUPER GOALIE</a>
+                    </li>
+                    <li class="nav-item <?= $this->activePage == 'contact-us' ? 'active' : '' ?>">
+                        <a class="nav-item-link active" href="/contact-us">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main class="main-content-container">
+            <?php echo $this->content ?>
+        </main>
+        <footer class="footer-container">
+            <div class="social-links-container text-center">
+                <a class ="social-link" href="https://www.facebook.com/grizzlycubsden2019/"
+                    target="_blank">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a class ="social-link" href="https://www.instagram.com/grizzlycubsden/"
+                    target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class ="social-link" href="mailto:grizzlycubsden@gmail.com">
+                    <i class="far fa-envelope"></i>
+                </a>
+            </div>
+            <div class="copyright-container text-center">
+                <span class="copyright-text">
+                    Copyright &copy; 2019 Grizzly Cubs Den - All Rights Reserved
+                </span>
+            </div>
+        </footer>
+
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+	    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+	    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+        <script src="<?=$this->basePath('js/jquery-3.1.0.min.js')?>"></script>
+        <script src="<?=$this->basePath('js/bootstrap.min.js')?>"></script>
+    </body>
+</html>

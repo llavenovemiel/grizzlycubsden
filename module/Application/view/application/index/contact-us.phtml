@@ -1,0 +1,98 @@
+<?php 
+    $this->headTitle('Contact Details | Grizzly Cubs Den');
+?>
+
+<div class="contact-details-container container">
+    <div class="detail-column">
+        <img class="detail-img" src="<?= $this->basePath('images/balloon-chubs.png')?>">
+        <h2 class="detail-caption">OPERATING HOURS</h2>
+        <div class="detail-body">
+            <div class="detail-group">
+                <div>
+                    Mondays to Thursdays
+                </div>
+                <div>
+                    9:30am - 7:30pm
+                </div>
+            </div>
+            <div class="detail-group">
+                <div>
+                   Fridays and Saturdays
+                </div>
+                <div>
+                    9:30am - 7:30pm
+                </div>
+            </div>
+            <div class="detail-group">
+                <div>
+                   Sundays and Holidays
+                </div>
+                <div>
+                    9:30am - 6:30pm
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="detail-column">
+        <img class="detail-img" src="<?= $this->basePath('images/balloon-javs-red.png')?>">
+        <h2 class="detail-caption">EMAIL</h2>
+        <div class="detail-body">
+            <div class="detail-group">
+                <a href="mailto:grizzlycubsden@gmail.com">
+                    grizzlycubsden@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="detail-column">
+        <img class="detail-img" src="<?= $this->basePath('images/balloon-maya.png')?>">
+        <h2 class="detail-caption">PHONE</h2>
+        <div class="detail-body">
+            <div class="detail-group">
+                <a href="tel:7808160175">
+                    7808160175
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="detail-column">
+        <img class="detail-img" src="<?= $this->basePath('images/balloon-javs-gray.png')?>">
+        <h2 class="detail-caption">ADDRESS</h2>
+        <div class="detail-body">
+            <div class="detail-group">
+                <a href="https://goo.gl/maps/oSBNkkSWF3xBsLg16" target="_blank">
+                    #1 5205 50th Ave Leduc, AB
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="contact-form-container">
+    <div class="container">
+        <h1 class="off-white contact-us-heading">
+            GET IN TOUCH
+        </h1>
+        <form action="" class="contact-form">
+            <div class="form-row contact-form-row">
+                <div class="col-md-6 contact-name-field">
+                    <input type="text" class="form-control contact-field" placeholder="NAME*">
+                </div>
+                <div class="col-md-6">
+                    <input type="email" class="form-control contact-field" placeholder="E-MAIL*">
+                </div>
+            </div>
+            <div class="contact-form-row">
+                <input type="text" class="form-control contact-field" placeholder="SUBJECT">
+            </div>
+            <div class="contact-form-row">
+                <textarea class="form-control contact-field" placeholder="MESSAGE" rows="7"></textarea>
+            </div>
+            <div class="send-btn-container">
+                <button type="button" class="send-btn btn"
+                    onclick="alert('Site Under Construction')">
+                    SEND MESSAGE
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
