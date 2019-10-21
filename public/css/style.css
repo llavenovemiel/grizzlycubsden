@@ -649,16 +649,37 @@ a:hover {
     margin-bottom: 30px;
 }
 .package-heading-img {
-    width: 500px;
+    height: 118px;
+    position: relative;
+    z-index: 1;
 }
+.package-title,
 .package-price {
-    margin-left: 20px;
     font-weight: bold;
-    padding: 19px;
-    background: #babbbb;
     border-radius: 15px;
     position: relative;
     top: 2px;
+}
+.package-title {
+    background: #ef3a4e;
+    font-family: 'Sniglet', cursive;
+    font-size: 25px;
+    top: 5px;
+    padding: 14px 14px 14px 30px;
+    margin-left: -27px;
+    z-index: 0;
+    letter-spacing: 0.08em;
+}
+.package-title.cubs-bday-package {
+    background: #2994d2;
+}
+.package-title.maya-bday-package {
+    background: #f1cba8;
+}
+.package-price {
+    padding: 19px;
+    margin-left: 20px;
+    background: #babbbb;
 }
 .birthday-package-details {
     padding-left: 70px;
@@ -674,6 +695,7 @@ a:hover {
 }
 .options-notif-container {
     background: #2994d2;
+    margin-bottom: 20px;
     margin-left: 10%;
     margin-right: 10%;
     padding: 10px 50px;
@@ -918,6 +940,29 @@ a:hover {
 .classes-table {
     width: 75%;
     margin: 0 auto;
+}
+.date-night-container {
+    margin-top: 30px;
+}
+.date-night-details-container,
+.date-night-schedule-container {
+    margin-top: 20px;
+}
+.date-night-heading {
+    font-size: 30px;
+    font-family: Chicle, cursive;
+    letter-spacing: 0.1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+.date-night-img-container > img {
+    width: 100%;
+}
+.date-night-details,
+.date-night-schedule {
+    list-style: initial;
+    width: 80%;
+    margin: 15px auto 0;
 }
 @media screen and (max-width: 768px) {
     .classes-message {
