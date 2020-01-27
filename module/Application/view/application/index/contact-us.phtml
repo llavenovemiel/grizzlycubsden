@@ -12,23 +12,23 @@
                     Monday
                 </div>
                 <div>
-                    9:30am - 7:00pm
+                    Closed
                 </div>
             </div>
             <div class="detail-group">
                 <div>
-                   Tuesday and Wednesday
+                   Tuesday - Friday
                 </div>
                 <div>
-                    9:30am - 8:00pm
+                    10:00am - 5:00pm
                 </div>
             </div>
             <div class="detail-group">
                 <div>
-                   Thursday, Friday and Saturday
+                   Saturday
                 </div>
                 <div>
-                    9:30am - 9:00pm
+                    10:00am - 6:00pm
                 </div>
             </div>
             <div class="detail-group">
@@ -36,7 +36,14 @@
                    Sunday
                 </div>
                 <div>
-                    9:30am - 6:30pm
+                    11:00am - 5:00pm
+                </div>
+            </div>
+            <div class="detail-group">
+                <div>
+                    <strong>
+                        (Times may still change. No booking necessary. Unlimited playtime.)
+                    </strong>
                 </div>
             </div>
         </div>
@@ -68,8 +75,8 @@
         <h2 class="detail-caption">ADDRESS</h2>
         <div class="detail-body">
             <div class="detail-group">
-                <a href="https://goo.gl/maps/oSBNkkSWF3xBsLg16" target="_blank">
-                    #1 5205 50th Ave Leduc, AB
+                <a href="https://goo.gl/maps/zjg6y5Vjt9gahy6BA" target="_blank">
+                    1-5205 50th Ave, Leduc, AB T9E 6T2, Canada
                 </a>
             </div>
         </div>
@@ -86,7 +93,7 @@
             TO GET DAILY AND WEEKLY UPDATES!
         </p>
         <p>
-            -Grizzly Cubs Den
+            -Grizzly Cubs Den Indoor Playground and Cafe
         </p>
     </div>
 </div>
@@ -98,23 +105,32 @@
         <form action="" class="contact-form">
             <div class="form-row contact-form-row">
                 <div class="col-md-6 contact-name-field">
-                    <input type="text" class="form-control contact-field" placeholder="NAME*">
+                    <input type="text" name="name" id="name" class="form-control contact-field"
+                        placeholder="NAME" maxlength="35">
                 </div>
                 <div class="col-md-6">
-                    <input type="email" class="form-control contact-field" placeholder="E-MAIL*">
+                    <input type="email" name="email" id="email" class="form-control contact-field"
+                        placeholder="E-MAIL" maxlength="35">
                 </div>
             </div>
             <div class="contact-form-row">
-                <input type="text" class="form-control contact-field" placeholder="SUBJECT">
+                <input type="text" name="subject" id="subject" class="form-control contact-field"
+                    placeholder="SUBJECT" maxlength="35">
             </div>
             <div class="contact-form-row">
-                <textarea class="form-control contact-field" placeholder="MESSAGE" rows="7"></textarea>
+                <textarea id="message" class="form-control contact-field" name="message"
+                    placeholder="MESSAGE" rows="7" maxlength="1000"></textarea>
             </div>
             <div class="send-btn-container">
-                <button type="button" class="send-btn btn"
-                    onclick="alert('Site Under Construction')">
+                <button type="button" id="submitContactForm" class="send-btn btn">
                     SEND MESSAGE
                 </button>
+            </div>
+            <div class="contact-us-notification-container">
+                <p class="text-center my-2">
+                    <span class="contact-us-notification"></span>
+                    <a class="contact-us-mail" href="mailto:grizzlycubsden@gmail.com"></a>
+                </p>
             </div>
         </form>
     </div>

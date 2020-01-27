@@ -7,12 +7,9 @@
 
 namespace Messaging;
 
-use Message\Model\Message;
-use Message\Model\MessageTable;
-use Zend\Db\ResultSet\ResultSet;
-use Zend\Db\Adapter\AdapterInterface;
-use Zend\Db\TableGateway\TableGateway;
-use Zend\ModuleManager\Feasture\ConfigProviderInterface;
+use Zend\Mail\Transport\Smtp;
+use Zend\Mail\Transport\SmtpOptions;
+use Messaging\Controller\MessagingController;
 
 class Module
 {
@@ -28,8 +25,27 @@ class Module
     //     return [];
     // }
 
-    // public function getControllerConfig()
-    // {
-    //     return [];
-    // }
+    public function getControllerConfig()
+    {
+        return [
+            'factories' => [
+                MessagingController::class => function($container) {
+                    $transport = new Smtp();
+                    $options   = new SmtpOptions([
+                        'host'              => 'smtp.gmail.com',
+                        'port'              => 587,
+                        'connection_class'  => 'login',
+                        'connection_config' => [
+                            'username' => 'grizzlycubs.contactus@gmail.com',
+                            'password' => 'cuqakxdqnpeyiqou',
+                            'ssl'      => 'tls',
+                        ],
+                    ]);
+                    $transport->setOptions($options);
+                    $appConfig = $container->get('Config')['app'];
+                    return new MessagingController($transport, $appConfig);
+                },
+            ],
+        ];
+    }
 }

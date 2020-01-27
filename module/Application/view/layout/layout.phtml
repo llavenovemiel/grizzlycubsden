@@ -40,9 +40,9 @@
                     <a class="nav-item-link" href="/about-us">ABOUT US</a>
                 </li>
 
-                <li class="nav-item left-item <?= $this->activePage == 'classes' ? 'active' : '' ?>">
+                <!-- <li class="nav-item left-item <?= $this->activePage == 'classes' ? 'active' : '' ?>">
                     <a class="nav-item-link" href="/classes">CLASSES</a>
-                </li>
+                </li> -->
 
                 <li class="nav-item left-item <?= $this->activePage == 'birthdays' ? 'active' : '' ?>">
                     <a class="nav-item-link" href="/birthdays">BIRTHDAYS</a>
@@ -60,9 +60,9 @@
                     <a class="nav-item-link" href="/facilities">FACILITIES</a>
                 </li>
 
-                <li class="nav-item right-item <?= $this->activePage == 'super-goalie' ? 'active' : '' ?>">
+                <!-- <li class="nav-item right-item <?= $this->activePage == 'super-goalie' ? 'active' : '' ?>">
                     <a class="nav-item-link" href="/super-goalie">SUPER GOALIE</a>
-                </li>
+                </li> -->
                 
                
                 <li class="nav-item right-item <?= $this->activePage == 'contact-us' ? 'active' : '' ?>">
@@ -95,18 +95,18 @@
                     <li class="nav-item <?= $this->activePage == 'about-us' ? 'active' : '' ?>">
                         <a class="nav-item-link" href="/about-us">ABOUT US</a>
                     </li>
-                    <li class="nav-item <?= $this->activePage == 'classes' ? 'active' : '' ?>">
+                    <!-- <li class="nav-item <?= $this->activePage == 'classes' ? 'active' : '' ?>">
                         <a class="nav-item-link" href="/classes">CLASSES</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item <?= $this->activePage == 'birthdays' ? 'active' : '' ?>">
                         <a class="nav-item-link" href="/birthdays">BIRTHDAYS</a>
                     </li>
                     <li class="nav-item <?= $this->activePage == 'facilities' ? 'active' : '' ?>">
                         <a class="nav-item-link" href="/facilities">FACILITIES</a>
                     </li>
-                    <li class="nav-item <?= $this->activePage == 'super-goalie' ? 'active' : '' ?>">
+                    <!-- <li class="nav-item <?= $this->activePage == 'super-goalie' ? 'active' : '' ?>">
                         <a class="nav-item-link" href="/super-goalie">SUPER GOALIE</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item <?= $this->activePage == 'contact-us' ? 'active' : '' ?>">
                         <a class="nav-item-link active" href="/contact-us">CONTACT US</a>
                     </li>
@@ -132,7 +132,7 @@
             </div>
             <div class="copyright-container text-center">
                 <span class="copyright-text">
-                    Copyright &copy; 2019 Grizzly Cubs Den - All Rights Reserved
+                    Copyright &copy; <?= date('Y'); ?> Grizzly Cubs Den - All Rights Reserved
                 </span>
             </div>
         </footer>
@@ -142,5 +142,8 @@
 	    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
         <script src="<?=$this->basePath('js/jquery-3.1.0.min.js')?>"></script>
         <script src="<?=$this->basePath('js/bootstrap.min.js')?>"></script>
+
+        <!-- append this to contact us view script as enhancement -->
+        <script src="<?=$this->basePath('scripts/contact-us.js')?>"></script>
     </body>
 </html>

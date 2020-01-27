@@ -9,7 +9,7 @@ namespace Messaging;
 
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
-use Zend\ServiceManager\Factory\InvokableFactory;
+// use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
     'router' => [
@@ -27,12 +27,16 @@ return [
     ],
     'controllers' => [
         'factories' => [
-            Controller\MessagingController::class => InvokableFactory::class,
+            // Controller\MessagingController::class => InvokableFactory::class,
         ],
     ],
     'view_manager' => [
         'strategies' => array(
             'ViewJsonStrategy',
         ),
+    ],
+    'app' => [
+        'companyContactMail' => 'grizzlycubsden@gmail.com',
+        'companyTestContactMail' => 'llavenovemiel@gmail.com',
     ],
 ];

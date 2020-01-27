@@ -36,16 +36,16 @@ class IndexController extends AbstractActionController
         return new ViewModel();
     }
 
-    public function classesAction()
-    {
-        $this->layout()->setVariable('activePage', 'classes');
-        return new ViewModel();
-    }
-    public function superGoalieAction()
-    {
-        $this->layout()->setVariable('activePage', 'super-goalie');
-        return new ViewModel();
-    }
+    // public function classesAction()
+    // {
+    //     $this->layout()->setVariable('activePage', 'classes');
+    //     return new ViewModel();
+    // }
+    // public function superGoalieAction()
+    // {
+    //     $this->layout()->setVariable('activePage', 'super-goalie');
+    //     return new ViewModel();
+    // }
     public function facilitiesAction()
     {
         $this->layout()->setVariable('activePage', 'facilities');

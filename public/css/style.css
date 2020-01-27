@@ -30,7 +30,7 @@ a:hover {
 	color: #f3d70e !important;
 }
 .skin {
-	color: #f7f7f7 !important;
+	color: #f1cba8 !important;
 }
 .grey {
 	color: #babbbb !important;
@@ -61,7 +61,7 @@ a:hover {
     }
 }
 .primary-btn:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
 }
 .banner-message {
     font-weight: bold;
@@ -74,7 +74,7 @@ a:hover {
 }
 .table-heading {
     background: #2994d2;
-    color: #d8ff00;
+    color: #f1f1f1;
     font-family: 'Sniglet', cursive;
     font-size: 28px;
     border-top-right-radius: 15px;
@@ -101,7 +101,7 @@ a:hover {
     flex-grow: 1;
     flex-basis: 0;
     text-align: center;
-    padding: 8px;
+    padding: 12px;
 }
 .table-cell:not(:last-of-type) {
     border-right: 1px solid #babbbb;;
@@ -237,12 +237,13 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: url('../images/home-banner.jpg');
+    /* background: url('../images/home-banner.jpg'); */
+    background: url('../images/saige-ballpit-lying-down.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: top;
 }
 .welcome-message {
-    width: 50%;
+    width: 47%;
 }
 .contact-btn-wrapper {
     margin-top: 25px;
@@ -288,7 +289,7 @@ a:hover {
 }
 .admission-details-container {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 45px;
 }
 .admission-details {
     position: relative;
@@ -335,16 +336,57 @@ a:hover {
 .mascot-img-container-right > .mascot-img {
    height: 200px; 
 }
-
-
+.rules-container {
+    background: #e4e4e4;
+}
+.rule-list-container {
+    padding: 30px 10% 45px;
+}
+.rule-list {
+    font-family: 'Sniglet', cursive;
+}
+.rule-list-item {
+    margin-bottom: 12px;
+}
+.classes-heading,
+.date-night-heading,
 .admission-heading,
-.carousel-heading {
+.carousel-heading,
+.rules-heading,
+.sg-bday-heading,
+.cafe-heading {
     padding: 10px;
     background: #2994d2;
     color: #f1f1f1;
     margin-bottom: 0;
     font-family: Chicle, cursive;
     letter-spacing: 0.15em;
+}
+.temporary-heading {
+    padding: 10px;
+    background: #ef3a4e;
+    color: #f1f1f1;
+    margin-bottom: 0;
+    font-family: Chicle, cursive;
+    letter-spacing: 0.15em;
+    font-size: 25px;
+}
+.rates-notif-list {
+    list-style: initial;
+    margin-left: 20px;
+}
+.waiver-heading {
+    background-color: #f1cba8;
+    margin-bottom: 0;
+    font-size: 25px;
+    padding: 10px;
+    margin-bottom: 0;
+    font-family: Chicle, cursive;
+    letter-spacing: 0.15em;
+}
+.waiver-heading > a {
+    position: relative;
+    top: 3px;
 }
 .slide-1 {
     background: url('../images/1.jpg');
@@ -380,8 +422,8 @@ a:hover {
         height: 400px;
     }
     .welcome-message {
-        font-size: 50px;
-        width: 70%;
+        font-size: 35px;
+        width: 50%;
     }
     .about-intro-container {
         display: flex;
@@ -430,9 +472,10 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: url('../images/about-banner.jpg');
+    /* background: url('../images/about-banner.jpg'); */
+    background: url('../images/about-banner-temp.jpg');
     background-size: cover;
-    background-position: center;
+    /* background-position: top; */
 }
 .about-content-container {
     padding-top: 30px;
@@ -458,7 +501,7 @@ a:hover {
 }
 .char-img-wrapper,
 .char-intro-container {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .char-img {
     height: 200px;
@@ -536,6 +579,9 @@ a:hover {
     background: #f1f1f1;
     padding-left: 20px;
 }
+.contact-field.invalid {
+    border: 1px solid #ef3a4e;
+}
 .send-btn-container {
     text-align: center;
     margin-top: 20px;
@@ -550,7 +596,10 @@ a:hover {
     width: 180px;
 }
 .send-btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+.contact-us-notification, .contact-us-mail {
+    font-family: 'Sniglet', cursive;
 }
 @media screen and (max-width: 768px) {
     .contact-details-container {
@@ -620,8 +669,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: url(../images/birthday-bg.png);
-    background-position: center;
+    background: url(../images/bdays-sub-banner.jpg);
     background-repeat: no-repeat;
 }
 .birthdays-info-container {
@@ -646,6 +694,7 @@ a:hover {
 }
 .birthday-package {
     padding-left: 10%;
+    padding-right: 10%;
     margin-bottom: 30px;
 }
 .package-heading-img {
@@ -705,11 +754,12 @@ a:hover {
     border-radius: 10px;
 }
 @media screen and (max-width: 768px) {
-    .birthday-packages-container {
+    /* .birthday-packages-container {
         text-align: center;
-    }
+    } */
     .birthday-package {
         padding-left: 0;
+        padding-right: 0;
     }
     .package-details {
         text-align: left;
@@ -718,7 +768,33 @@ a:hover {
         margin-bottom: 5px;
     }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 895px) {
+    .birthday-package-heading {
+        position: relative;
+     }
+     .package-heading-img {
+        position: absolute;
+     }
+     .package-title {
+        display: block;
+        margin-left: 50px;
+        text-align: center;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        font-size: 20px;
+        top: 2px;
+    }
+    .package-price {
+        display: block;
+        text-align: center;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-left: 50px;
+        padding-bottom: 14px;
+        /* font-size: 20px; */
+     }
+}
+@media screen and (max-width: 650px) {
     .birthdays-banner-container {
         height: 450px;
         background-position: -275px -180px;
@@ -742,28 +818,46 @@ a:hover {
     .birthdays-info-container {
         padding: 12px;
     }
+    /* .birthday-packages-container {
+        padding-left: 0;
+        padding-right: 0;
+    } */
     .birthdays-heading {
         font-size: 28px;
     }
     .birthday-package-heading {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+       position: relative;
     }
     .package-heading-img {
-        width: 280px;
+        position: absolute;
+        width: 95px;
+        height: auto;
+        left: 0px;
+        top: -3px;
+    }
+    .package-title {
+        font-size: 14px;
+        display: block;
+        margin-left: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-left: 50px;
     }
     .package-price {
         font-size: 14px;
         padding: 7px;
-        margin-left: 0;
         border-radius: 8px;
+        display: block;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-left: 50px;
     }
     .birthday-package-details {
         padding-left: 0;
     }
     .options-notif-container {
-        margin: 0;
+        margin-left: 0;
+        margin-right: 0;
         padding: 12px;
     }
     .contact-us-heading{
@@ -771,6 +865,15 @@ a:hover {
     }
     .contact-name-field{
         margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 425px) {
+    .package-heading-img {
+        display: none;
+    }
+    .package-title,
+    .package-price {
+        margin-left: 0;
     }
 }
 /* birthdays end */
@@ -781,7 +884,7 @@ a:hover {
 }
 .super-goalie-banner-container {
     height: 450px;
-    background: url('../images/super-goalie-banner.jpg');
+    background: url('../images/super-goalie-banner-min.jpg');
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
@@ -822,7 +925,7 @@ a:hover {
     margin-bottom: 20px;
 }
 .sg-feature {
-    width: 33.33%;
+    width: 50%;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -844,7 +947,7 @@ a:hover {
     font-size: 35px;
 }
 .price-table {
-    width: 70%;
+    width: 80%;
     margin: 0 auto 30px;
 }
 .price-table .table-cell {
@@ -854,6 +957,58 @@ a:hover {
     list-style: circle;
     margin-left: 15px;
     text-align: left;
+}
+.sg-bday-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.sg-bday-content {
+    text-align: justify;
+    font-family: 'Sniglet', cursive;
+}
+.sg-bday-notif-container > p {
+    margin-bottom: 2px;
+}
+.sg-bday-notif-container > p:last-child {
+    margin-bottom: 0;
+}
+.text-underline {
+    text-decoration: underline;
+}
+@media screen and (max-width: 1199px) {
+    .super-goalie-content-container .birthday-package-heading {
+        position: relative;
+    }
+    .super-goalie-content-container .package-heading-img {
+        position: absolute;
+        top: -10px;
+        left: -17px;
+    }
+    .super-goalie-content-container .package-title,
+    .super-goalie-content-container .package-price {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+        padding: 10px;
+    }
+    .super-goalie-content-container .package-title {
+        border-bottom-right-radius: 0;
+        top: 2px;
+        font-size: 20px;
+    }
+    .super-goalie-content-container .package-price {
+        border-top-right-radius: 0;
+
+    }
+}
+@media screen and (max-width: 650px) {
+    .super-goalie-content-container .package-heading-img {
+        display: none;
+    }
+    .super-goalie-content-container .package-title,
+    .super-goalie-content-container .package-price {
+        padding: 7px;
+    }
 }
 @media screen and (max-width: 768px) {
     .super-goalie-banner-container {
@@ -913,6 +1068,44 @@ a:hover {
         text-align: center;
     }
 }
+.cafe-details-container {
+}
+.menu-container {
+    width: 670px;
+    max-width: 100%;
+    margin: 30px auto;
+    padding: 20px;
+    border: 6px solid #f1cba8;
+    position: relative;
+    font-family: 'Sniglet', cursive;
+}
+.menu-title-container {
+    position: absolute;
+    width: 100%;
+    top: -21px;
+    left: 0;
+}
+.menu-title {
+    background: #f2f2f2;
+    padding: 10px 5px 10px 10px;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+}
+.menu-message {
+    font-style: italic;
+    font-size: 14px;
+}
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-item:not(:first-of-type) {
+    margin-top: 7px;
+}
+.item-price {
+    font-size: 17px;
+}
 /* facilities end */
 
 /* classes*/
@@ -941,28 +1134,53 @@ a:hover {
     width: 75%;
     margin: 0 auto;
 }
-.date-night-container {
-    margin-top: 30px;
+.dn-heading-container {
+    padding-left: 20px;
+}
+.dn-content-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .date-night-details-container,
 .date-night-schedule-container {
     margin-top: 20px;
 }
-.date-night-heading {
-    font-size: 30px;
-    font-family: Chicle, cursive;
-    letter-spacing: 0.1em;
-    margin-left: 0;
-    margin-right: 0;
-}
 .date-night-img-container > img {
     width: 100%;
+}
+.dn-heading-img {
+    height: 85px;
+    position: relative;
+    z-index: 1;
+}
+.dn-details-title {
+    background: #ef3a4e;
+    font-family: 'Sniglet', cursive;
+    font-size: 20px;
+    position: relative;
+    top: 4px;
+    left: -34px;
+    padding: 14px 14px 14px 35px;
+    z-index: 0;
+    letter-spacing: 0.08em;
+    border-radius: 15px;
+    display: inline-block;
+    width: 75%;
+    text-align: center;
+}
+.dn-details-title.schedule {
+    background: #2994d2;
 }
 .date-night-details,
 .date-night-schedule {
     list-style: initial;
-    width: 80%;
-    margin: 15px auto 0;
+    margin: 0 80px;
+}
+@media screen and (max-width: 815px) {
+    .dn-details-title {
+        font-size: 20px;
+        width: 70%;
+    }
 }
 @media screen and (max-width: 768px) {
     .classes-message {
@@ -974,6 +1192,19 @@ a:hover {
     .classes-table {
         width: 100%;
         margin: 0 auto;
+    }
+    .dn-details-title {
+        font-size: 20px;
+        width: 80%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .dn-heading-container {
+        padding-left: 0;
+    }
+    .dn-details-title {
+        font-size: 20px;
+        width: 73%;
     }
 }
 /* classes end */
